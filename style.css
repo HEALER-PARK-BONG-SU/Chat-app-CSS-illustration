@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+
+*,
+*::after,
+*::before{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+img{
+   width:100%;
+   display: block;
+    border-radius:50%;
+}
+
+:root{
+    /* secondary */
+    /* (sub-heading at the top of the app UI) */
+    --PaleViolet: hsl(276, 100%, 81%);
+    /* (chat on the left) */
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    /*  (chat on the right) */
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    /*  (placeholder text) */
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    /* (main heading) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (paragraph) */
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+
+    /* primary */
+    --White: hsl(0, 0%, 100%);
+    /* (app background) */
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    /* (submit button background) */
+    --Very-Dark-Desaturated-Violet : hsl(271, 36%, 24%);
+    /* (radio button outline) */
+    --Very-Light-Magenta : hsl(289, 100%, 72%);
+
+    /* ========== gradients */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-voilet:hsl(264, 100%, 61%);
+    /* font family */
+    --font-family-main:'Rubik', sans-serif;;
+}
+
+body{
+    background-color:var(--Light-Grayish-Violet);
+    font-family:var(--font-family-main);
+    display: flex;
+    min-height:100vh;
+}
+
+.upper-gradient-box{
+    z-index:-999;
+    width:470px;
+    height:90vh;
+    position:fixed;
+    left:-5.5rem;
+    top:0;
+    border-radius:0 0 50% 50%;
+    background:linear-gradient(-150deg,hsl(293, 94%, 49%),var(--Light-voilet));
+}
+
+.lower-gradient-box{
+    z-index:-999;
+    width:470px;
+    height:90vh;
+    position:fixed;
+    right:-10rem;
+    bottom:0;
+    border-radius:50% 50% 0 0;
+    background:hsla(268, 7%, 64%, 0.15);
+}
+
+section{
+    width:1200px;
+    min-height:95vh;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border:2px solid green; */
+}
+
+.phone{
+    min-width:280px;
+    width:280px;
+    max-width:280px;
+    height:570px;
+    background-color:var(--White);
+    border-radius:2rem;
+
+    display: flex;
+    align-items: center;
+    margin-right:5rem;
+    justify-content: center;
+    padding:.7rem;
+}
+
+.inner-section{
+    background-color:var(--Light-Grayish-Violet);
+    border-radius:1.4rem;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    font-size:.7rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:.5rem;
+}
+
+.header{
+    position: relative;
+    background:linear-gradient(to left,var(--Light-Magenta),var(--Light-voilet));
+    height:5rem;
+    padding:1rem .6rem;
+    color:var(--White);
+    display: flex;
+    align-items: flex-end;
+    border-radius:0 0 .3rem .3rem
+}
+.header::after{
+    content:"";
+    background:var(--White);
+    height:1.7rem;
+    width:60%;
+    position: absolute;
+    top:-.6rem;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius:.8rem;
+}
+
+
+.border-img{
+    border:2px solid var(--White);
+    border-radius:50%;
+    width:30px;
+    height:30px;
+    display: flex;
+    margin-left:.3rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+.fa-solid{
+    font-size:.8rem;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    width:100%;
+    margin-top:auto;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    margin-left:.4rem;
+}
+
+.profile-pic{
+    margin-left:.3rem;
+}
+
+.name{
+    font-size:.9rem;
+    color:var(--White);
+}
+
+.available{
+    font-size:.65rem;
+    color:var(--Grayish-Blue);
+}
+
+.input-box{
+    margin-top: auto;
+    background-color:var(--White);
+    width:95%;
+    margin-left:auto;
+    margin-right: auto;
+    height:2.5rem;
+    display: flex;
+    align-items: center;
+    border-radius:2rem;
+    /* background-color:red; */
+    padding:0 .1rem 0 0.6rem;
+}
+
+input[type='text']{
+    width:100%;
+    background-color:transparent;
+    border:none;
+    height:85%;
+    color:var(--);
+    font-size:.8rem;
+    outline:none;
+}
+
+input::placeholder{
+    color:var(--Grayish-Blue);
+}
+
+.send{
+    text-align:center;
+    color:var(--White);
+    border-radius:50%;
+    background-color:var(--Very-Dark-Desaturated-Violet);
+    padding:.65rem .8rem;
+}
+
+.gray{
+    margin-right:auto;
+    padding:.6rem .8rem;
+    border-radius:10px 10px 10px 0;
+    background-color:hsla(206, 7%, 79%, 0.4);
+    width:70%;
+    color:var(--Moderate-Violet);
+    margin-left:.5rem;
+    margin-top:.5rem;
+}
+
+.white{
+    /* background-color:green; */
+    margin-left: auto;
+    margin-right:.6rem;
+    background-color:var(--White);
+    padding:.5rem .3rem;
+    color:var(--Desaturated-Dark-Violet);
+    width:70%;
+    border-radius:10px 10px 0 10px;
+    margin-top:.5rem;
+}
+
+.dog-pic{
+    margin-top:.5rem;
+    margin-left:auto;
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+    margin-right:.6rem;
+    /* background-color:red; */
+}
+.dog-pic .pic{
+    border-radius:0;
+    width:47px;
+    height:47px;
+    border-radius:6px;
+}
+
+.pricing{
+    background:linear-gradient(to left, var(--Light-voilet),var(--Light-Magenta));
+    display: flex;
+    align-items: center;
+    padding:0 1.5rem 0 .7rem;
+    color:var(--White);
+    height:2.3rem;
+    border-radius:1rem .7rem .7rem 0;
+    width:80%;
+    margin-left:.5rem;
+    margin-top:.5rem;
+}
+
+.circle{
+    width:1rem;
+    height:1rem;
+    border-radius:50%;
+    border:1px solid var(--White);
+    margin-right:7px;
+    margin-bottom: 3px;
+}
+
+.price{
+    font-size:1rem;
+    font-weight:500;
+    margin-left: auto;
+}
+
+.text{
+    /* border:2px solid red; */
+    max-width:450px;
+    /* padding-right:3rem; */
+}
+
+.heading{
+    /* background-color:red; */
+    font-size:2.4rem;
+    font-weight:500;
+    color:var(--Very-Dark-Desaturated-Violet);
+    margin-bottom:.7rem;
+}
+
+.desc{
+    line-height:1.7rem;
+    color:var(--Dark-Grayish-Violet);
+}
+
+
+@media screen and (max-width:750px){
+    section{
+        flex-direction: column;
+    }
+
+    .phone{
+        margin-right:0;
+    }
+    .text{
+        text-align: center;
+        margin-top:5rem;
+    }
+    .upper-gradient-box{
+        width:450px;
+        height:90vh;
+        left:-10rem;
+    }
+    
+    .lower-gradient-box{
+        z-index:-999;
+        width:450px;
+        height:90vh;
+        right:-17rem;
+    }
+}
